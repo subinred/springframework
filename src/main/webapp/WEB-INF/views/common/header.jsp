@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,14 @@
             Spring 
          </a>
          <div>
-            <a href="#" class="btn btn-success btn-small">로그인</a>
+         <c:if test="${sessionMid==null}">
+            <a href="${pageContext.request.contextPath}/ch08/login" class="btn btn-success btn-small">로그인</a>
+         </c:if>
+         <c:if test="${sessionMid!=null}">
+         	<b class="text-white mr-2">User ID:${sessionMid}</b>
+            <a href="${pageContext.request.contextPath}/ch08/logout" class="btn btn-success btn-small">로그아웃</a>
+         </c:if>
+         </div>
       </nav>
       <div class="container-fluid flex-grow-1">
          <div class="row h-100">
