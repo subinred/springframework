@@ -87,6 +87,7 @@
 					function login() {
 						let mid = $("#mid").val();
 						let mpassword = $("#mpassword").val();
+						
 						$.ajax({
 							url: "loginAjax",
 							data: {mid, mpassword},
@@ -110,6 +111,7 @@
 								mpasswordError.html("패스워드가 잘못됨");
 							}
 						});
+						
 					}
 					
 					function logout() {

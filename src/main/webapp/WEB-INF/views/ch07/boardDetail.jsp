@@ -12,6 +12,12 @@
 	 	<p>content: ${board.content}</p>
 	 	<p>writer: ${board.writer}</p>
 	 	<p>date: <fmt:formatDate value="${board.date}" pattern="yyyy.MM.dd"/></p>
+	 	<hr/>
+	 	<p>no: ${commonData.no}</p>
+	 	<p>title: ${commonData.title}</p>
+	 	<p>content: ${commonData.content}</p>
+	 	<p>writer: ${commonData.writer}</p>
+	 	<p>date: <fmt:formatDate value="${commonData.date}" pattern="yyyy.MM.dd"/></p>
 	 </div>
    
    <%@ include file="/WEB-INF/views/common/footer.jsp" %>
