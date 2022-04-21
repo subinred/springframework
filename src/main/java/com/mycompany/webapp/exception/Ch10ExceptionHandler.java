@@ -31,8 +31,9 @@ public class Ch10ExceptionHandler {
 	}
 	@ExceptionHandler(Exception.class)//에러가 구체적이지 않고, 500 에러가 떳을 경우
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)//응답의 staus 번호를 변경해줌, 상황에 따라 자바스크립트에서 다르게 처리해줄 필요가 있음
-	public String handleCh10SoldOutException(Exception e) {
+	public String handleExcepion(Exception e) {
 		log.info("실행:"+e.getMessage());
+		e.printStackTrace();
 		return "ch10/500";
 	}
 	@ExceptionHandler(NoHandlerFoundException.class)//404에러를 500에러로 변환했을 경우 사용
